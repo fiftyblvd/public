@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+        #imageDisplay {
+            width: 80%;
+            max-width: 500px;
+            margin-top: 20px;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        .image-button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Photo Gallery</h1>
+    <div id="imageDisplay">
+        <img id="displayedImage" src="01.jpg" alt="Image" style="width:100%; height:auto;">
+    </div>
+    <div class="button-container">
+        <button class="image-button" onclick="showImage('01.jpg')">Show Image 1</button>
+        <button class="image-button" onclick="showImage('02.jpg')">Show Image 2</button>
+        <button class="image-button" onclick="showImage('03.jpg')">Show Image 3</button>
+        <button class="image-button" onclick="showImage('04.jpg')">Show Image 4</button>
+    </div>
+
+    <script>
+        function showImage(imageSrc) {
+            document.getElementById("displayedImage").src = imageSrc;
+        }
+    </script>
+</body>
+</html>
